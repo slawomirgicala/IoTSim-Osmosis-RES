@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
  * The loop is triggered no more often than every 15 minutes.
  */
 
-public class RES_example_with_wind_turbines {
+public class RES_example_solar_power_only {
     //Workload and infrastructure configuration are the same as in the example 2.
     public static final String configurationFile = "inputFiles/res/RES_example_with_wind_turbines_infrastructure.json";
     public static final String osmesisAppFile =  "inputFiles/res/RES_example_with_wind_turbines_workload.csv";
@@ -55,7 +55,7 @@ public class RES_example_with_wind_turbines {
     EdgeSDNController edgeSDNController;
 
     public static void main(String[] args) throws Exception {
-        RES_example_with_wind_turbines osmosis = new RES_example_with_wind_turbines();
+        RES_example_solar_power_only osmosis = new RES_example_solar_power_only();
         osmosis.start();
     }
 
@@ -67,9 +67,9 @@ public class RES_example_with_wind_turbines {
 
         // Set Agent and Message classes
         AgentBroker agentBroker = AgentBroker.getInstance();
-        agentBroker.setDcAgentClass(RES_example_with_wind_turbines_DCAgent.class);
-        agentBroker.setDeviceAgentClass(RES_example_with_wind_turbines_DeviceAgent.class);
-        agentBroker.setAgentMessageClass(RES_example_with_wind_turbines_AgentMessage.class);
+        agentBroker.setDcAgentClass(RES_example_solar_power_only_DCAgent.class);
+        agentBroker.setDeviceAgentClass(RES_example_solar_power_only_DeviceAgent.class);
+        agentBroker.setAgentMessageClass(RES_example_solar_power_only_AgentMessage.class);
 
         //Simulation is not started yet thus there is not any MELs.
         //Links for Agents between infrastructure elements.
@@ -77,7 +77,7 @@ public class RES_example_with_wind_turbines {
         agentBroker.addAgentLink("temperature_1", "Edge_2");
 
         //Osmotic Agents time interval
-        agentBroker.setMAPEInterval(15*60);
+        agentBroker.setMAPEInterval(1);
 
         //Create Energy Controllers
         Map<String, EnergyController> energyControllers = getEnergyControllers();
@@ -86,7 +86,7 @@ public class RES_example_with_wind_turbines {
         agentBroker.setEnergyControllers(energyControllers);
 
         //Set the simulation start time
-        agentBroker.setSimulationStartTime("20160501:0000");
+        agentBroker.setSimulationStartTime("20160101:0000");
 
         // Initialize the CloudSim library
         CloudSim.init(num_user, calendar, trace_flag);
@@ -135,9 +135,7 @@ public class RES_example_with_wind_turbines {
         Log.printLine();
         Log.printLine("Post-mortem RES energy analysis!");
         RESPrinter res_printer = new RESPrinter();
-        res_printer.postMortemAnalysis(energyControllers,"20160101:0000", true,36);
-        res_printer.postMortemAnalysis(energyControllers,"20160501:0000", false, 36);
-        res_printer.postMortemAnalysis(energyControllers,"20160901:0000", false, 36);
+        res_printer.postMortemAnalysis(energyControllers,"20160101:0000", true,1);
         Log.printLine("End of RES analysis!");
     }
 

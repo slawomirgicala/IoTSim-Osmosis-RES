@@ -17,11 +17,15 @@ import org.cloudbus.agent.DCAgent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RES_example_with_wind_turbines_DCAgent extends DCAgent {
+public class RES_example_solar_power_only_DCAgent extends DCAgent {
 
     List<String> melNames = new ArrayList<>();
+    double resPower;
+    double lowEmission;
+    double lat;
+    double lon;
 
-    public RES_example_with_wind_turbines_DCAgent() {
+    public RES_example_solar_power_only_DCAgent() {
         //This is necessary for dynamic agent instance creation.
     }
 
@@ -35,6 +39,14 @@ public class RES_example_with_wind_turbines_DCAgent extends DCAgent {
             melNames.add(name);
         }
 
+        //Get current Green Energy Ratio
+        //it is assumed that there is at least one RES source
+        if (energyController != null) {
+            resPower = energyController.getRESCurrentPower();
+            lowEmission = energyController.getPowerGrids().get(0).getLowEmission();
+            lat = energyController.getEnergySources().get(0).getLocation().getLatitude();
+            lon = energyController.getEnergySources().get(0).getLocation().getLongitude();
+        }
     }
 
     @Override
@@ -42,12 +54,18 @@ public class RES_example_with_wind_turbines_DCAgent extends DCAgent {
         super.analyze();
 
         //Create new message.
-        RES_example_with_wind_turbines_AgentMessage message = (RES_example_with_wind_turbines_AgentMessage) newAgentMessage();
+        RES_example_solar_power_only_AgentMessage message = (RES_example_solar_power_only_AgentMessage) newAgentMessage();
 
         //Prepapre message content - list of available MELs.
         for(String name:melNames){
             message.addMEL(name);
         }
+
+        message.setGreenEnergyRatio(resPower);
+        message.setLowEmissionPercentage(lowEmission);
+
+        message.setLat(lat);
+        message.setLon(lon);
 
         //Send to all neighbours (null destination means all - follows the agent topology defined in the example file).
         message.setDESTINATION(null);
