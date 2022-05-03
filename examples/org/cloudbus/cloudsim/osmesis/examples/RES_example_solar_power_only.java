@@ -45,10 +45,10 @@ import java.util.stream.Collectors;
 
 public class RES_example_solar_power_only {
     //Workload and infrastructure configuration are the same as in the example 2.
-    public static final String configurationFile = "inputFiles/res/RES_example_with_wind_turbines_infrastructure.json";
-    public static final String osmesisAppFile =  "inputFiles/res/RES_example_with_wind_turbines_workload.csv";
+    public static final String configurationFile = "inputFiles/res/RES_example_solar_power_only_infrastructure.json";
+    public static final String osmesisAppFile =  "inputFiles/res/RES_example_solar_power_only_workload.csv";
     //RES configuration is the same as in the example 1.
-    public static final String RES_CONFIG_FILE =  "inputFiles/res/RES_example_with_wind_turbines_energy_config.json";
+    public static final String RES_CONFIG_FILE =  "inputFiles/res/RES_example_solar_power_only_energy_config.json";
 
     OsmosisBuilder topologyBuilder;
     OsmesisBroker osmesisBroker;
