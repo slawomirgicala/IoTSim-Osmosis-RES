@@ -189,6 +189,8 @@ public class ConfiguationEntity {
 		double processingAbility;
 		EdgeLetEntity dataTemplate;
 		double bw;
+		double latitude;
+		double longitude;
 
 	}
 

@@ -104,7 +104,8 @@ public class RES_example_solar_power_only_DeviceAgent extends DeviceAgent {
                 RES_example_solar_power_only_AgentMessage ex6_message = (RES_example_solar_power_only_AgentMessage) message;
 
                 //choose the MEL instance that is closest to the device
-                double val = - haversineDistance(ex6_message.getLat(), ex6_message.getLon(), 52.52, 13.40 );
+                double val = - haversineDistance(ex6_message.getLat(), ex6_message.getLon(),
+                        getIoTDevice().getLatitude(), getIoTDevice().getLongitude() );
 
                 //choose the MEL instance that is located in the datacenter with highest percentage of low-carbon power
                 // sources in the power grid

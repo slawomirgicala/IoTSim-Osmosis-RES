@@ -93,24 +93,6 @@
 			"name": "edge2",
 			"controller": "edge1_sdn1",
 			"iops":1000000000
-		},
-		{
-			"type" : "edge",
-			"name": "edge3",
-			"controller": "edge1_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "edge",
-			"name": "edge4",
-			"controller": "edge1_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "edge",
-			"name": "edge5",
-			"controller": "edge1_sdn1",
-			"iops":1000000000
 		}
         ],
 		"links" :
@@ -118,10 +100,7 @@
 			{ "source" : "core1" , "destination" : "edge1_gateway", "bw" : 100},
 			{ "source" : "core2" , "destination" : "edge1_gateway", "bw" : 100},
 			{ "source" : "core1" , "destination" : "edge1" , "bw" : 100},
-			{ "source" : "core1" , "destination" : "edge2" , "bw" : 100},
-			{ "source" : "core2" , "destination" : "edge3" , "bw" : 100},
-			{ "source" : "core2" , "destination" : "edge4" , "bw" : 100},
-			{ "source" : "core2" , "destination" : "edge5" , "bw" : 100},
+			{ "source" : "core2" , "destination" : "edge2" , "bw" : 100},
 			{ "source" : "edge1" , "destination" : "edgeDevice_1" , "bw" : 100},
 			{ "source" : "edge2" , "destination" : "edgeDevice_2" , "bw" : 100}
 		],
@@ -144,7 +123,9 @@
 				 "networkModelEntity":{
 					"communicationProtocol":"xmpp",
 					"networkType":"wifi"
-				 }
+				 },
+				"latitude": 48,
+				"longitude": 2
 			  },
 			  {
 				"name":"temperature_2",
@@ -164,168 +145,32 @@
 				 "networkModelEntity":{
 					"communicationProtocol":"xmpp",
 					"networkType":"wifi"
-				 }
+				 },
+				"latitude": 52.52,
+				"longitude": 13.4
 			  },
-			  {
+			{
 				"name":"temperature_3",
 				"bw":100,
 				"max_battery_capacity":100.0,
 				"battery_sensing_rate":0.001,
 				"battery_sending_rate":0.001,
 				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
+				"mobilityEntity":{
 					"movable":false,
 					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
+						"x":0.0,
+						"y":0.0,
+						"z":0.0
 					}
-				 },
-				 "networkModelEntity":{
+				},
+				"networkModelEntity":{
 					"communicationProtocol":"xmpp",
 					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_4",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_5",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_6",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_7",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_8",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_9",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  },
-			  {
-				"name":"temperature_10",
-				"bw":100,
-				"max_battery_capacity":100.0,
-				"battery_sensing_rate":0.001,
-				"battery_sending_rate":0.001,
-				"ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				 "mobilityEntity":{
-					"movable":false,
-					"location":{
-					   "x":0.0,
-					   "y":0.0,
-					   "z":0.0
-					}
-				 },
-				 "networkModelEntity":{
-					"communicationProtocol":"xmpp",
-					"networkType":"wifi"
-				 }
-			  }
+				},
+				"latitude": 52.52,
+				"longitude": 13.4
+			}
 		]
     },
 	{
@@ -489,108 +334,7 @@
 			   { "source" : "edge23" , "destination" : "edgeDevice_23" , "bw" : 100},
 			   { "source" : "edge24" , "destination" : "edgeDevice_24" , "bw" : 100}
 		   ],
-		   "ioTDevices":[
-			   {
-				   "name":"temperature_21",
-				   "bw":100,
-				   "max_battery_capacity":100.0,
-				   "battery_sensing_rate":0.0001,
-				   "battery_sending_rate":0.0001,
-				   "ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				   "mobilityEntity":{
-					   "movable":false,
-					   "location":{
-						   "x":0.0,
-						   "y":0.0,
-						   "z":0.0
-					   }
-				   },
-				   "networkModelEntity":{
-					   "communicationProtocol":"xmpp",
-					   "networkType":"wifi"
-				   }
-			   },
-			   {
-				   "name":"temperature_22",
-				   "bw":100,
-				   "max_battery_capacity":100.0,
-				   "battery_sensing_rate":0.001,
-				   "battery_sending_rate":0.001,
-				   "ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				   "mobilityEntity":{
-					   "movable":false,
-					   "location":{
-						   "x":0.0,
-						   "y":0.0,
-						   "z":0.0
-					   }
-				   },
-				   "networkModelEntity":{
-					   "communicationProtocol":"xmpp",
-					   "networkType":"wifi"
-				   }
-			   },
-			   {
-				   "name":"temperature_23",
-				   "bw":100,
-				   "max_battery_capacity":100.0,
-				   "battery_sensing_rate":0.001,
-				   "battery_sending_rate":0.001,
-				   "ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				   "mobilityEntity":{
-					   "movable":false,
-					   "location":{
-						   "x":0.0,
-						   "y":0.0,
-						   "z":0.0
-					   }
-				   },
-				   "networkModelEntity":{
-					   "communicationProtocol":"xmpp",
-					   "networkType":"wifi"
-				   }
-			   },
-			   {
-				   "name":"temperature_24",
-				   "bw":100,
-				   "max_battery_capacity":100.0,
-				   "battery_sensing_rate":0.001,
-				   "battery_sending_rate":0.001,
-				   "ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				   "mobilityEntity":{
-					   "movable":false,
-					   "location":{
-						   "x":0.0,
-						   "y":0.0,
-						   "z":0.0
-					   }
-				   },
-				   "networkModelEntity":{
-					   "communicationProtocol":"xmpp",
-					   "networkType":"wifi"
-				   }
-			   },
-			   {
-				   "name":"temperature_25",
-				   "bw":100,
-				   "max_battery_capacity":100.0,
-				   "battery_sensing_rate":0.001,
-				   "battery_sending_rate":0.001,
-				   "ioTClassName":"org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
-				   "mobilityEntity":{
-					   "movable":false,
-					   "location":{
-						   "x":0.0,
-						   "y":0.0,
-						   "z":0.0
-					   }
-				   },
-				   "networkModelEntity":{
-					   "communicationProtocol":"xmpp",
-					   "networkType":"wifi"
-				   }
-			   }
-		   ]
+		   "ioTDevices":[]
 	   }
    ],
 	  "logEntity":{
@@ -637,6 +381,15 @@
 			},
 			{
 				"name": "VM_2",
+				"pes" : 2,
+				"mips" : 250,
+				"ram" : 512,
+				"storage" : 10000,
+				"bw" : 1000,
+				"cloudletPolicy": "TimeShared"
+			},
+			{
+				"name": "VM_3",
 				"pes" : 2,
 				"mips" : 250,
 				"ram" : 512,
@@ -882,6 +635,7 @@
 		],
 		"links": [
 			{ "source" : "edge1_gateway" , "destination" : "sdwan_router_1" , "bw" : 1000},
+			{ "source" : "edge2_gateway" , "destination" : "sdwan_router_1" , "bw" : 1000},
 			{ "source" : "sdwan_router_1" , "destination" : "sdwan_router_2" , "bw" : 1000},
 			{ "source" : "sdwan_router_1" , "destination" : "sdwan_router_3" , "bw" : 1000},
 			{ "source" : "sdwan_router_2" , "destination" : "sdwan_router_4" , "bw" : 1000},

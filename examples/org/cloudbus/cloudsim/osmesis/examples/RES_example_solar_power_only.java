@@ -26,9 +26,7 @@ import org.cloudbus.res.EnergyController;
 import org.cloudbus.res.config.AppConfig;
 import org.cloudbus.res.dataproviders.res.RESResponse;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -55,6 +53,7 @@ public class RES_example_solar_power_only {
     EdgeSDNController edgeSDNController;
 
     public static void main(String[] args) throws Exception {
+        //System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("test_output_sg.txt"))));
         RES_example_solar_power_only osmosis = new RES_example_solar_power_only();
         osmosis.start();
     }
@@ -75,6 +74,10 @@ public class RES_example_solar_power_only {
         //Links for Agents between infrastructure elements.
         agentBroker.addAgentLink("temperature_1", "Edge_1");
         agentBroker.addAgentLink("temperature_1", "Edge_2");
+        agentBroker.addAgentLink("temperature_2", "Edge_1");
+        agentBroker.addAgentLink("temperature_2", "Edge_2");
+        agentBroker.addAgentLink("temperature_3", "Edge_1");
+        agentBroker.addAgentLink("temperature_3", "Edge_2");
 
         //Osmotic Agents time interval
         agentBroker.setMAPEInterval(1);
