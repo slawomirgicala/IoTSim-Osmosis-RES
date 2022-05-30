@@ -110,7 +110,7 @@ public class DatacenterBroker extends SimEntity  {
 		
 		setVmsRequested(0);
 		setVmsAcks(0);
-		setVmsDestroyed(1);
+		setVmsDestroyed(0);
 
 		setDatacenterIdsList(new LinkedList<Integer>());
 		setDatacenterRequestedIdsList(new ArrayList<Integer>());

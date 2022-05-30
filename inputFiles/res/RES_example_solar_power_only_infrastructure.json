@@ -26,28 +26,11 @@
 				"bwSize":100,
 				"storage":10000,
 				"mips":10000
-            },
-			{
-				"name":"edgeDevice_2",
-				"pes" : 4,
-				"ramSize":10000,
-				"bwSize":100,
-				"storage":10000,
-				"mips":10000
             }
             ],
 		"MELEntities":[
 		{
 			"name":"MEL.1",
-			"bw":100,
-			"mips":250,
-			"ram":10000,
-			"pesNumber":1,
-			"vmm":"xxx",
-			"cloudletSchedulerClassName":"org.cloudbus.cloudsim.CloudletSchedulerTimeShared"
-		},
-		{
-			"name":"MEL.2",
 			"bw":100,
 			"mips":250,
 			"ram":10000,
@@ -77,20 +60,8 @@
 			"iops":1000000000
 		},
 		{
-			"type" : "core",
-			"name": "core2",
-			"controller": "edge1_sdn1",
-			"iops":1000000000
-		},
-		{
 			"type" : "edge",
 			"name": "edge1",
-			"controller": "edge1_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "edge",
-			"name": "edge2",
 			"controller": "edge1_sdn1",
 			"iops":1000000000
 		}
@@ -98,11 +69,8 @@
 		"links" :
 		[
 			{ "source" : "core1" , "destination" : "edge1_gateway", "bw" : 100},
-			{ "source" : "core2" , "destination" : "edge1_gateway", "bw" : 100},
 			{ "source" : "core1" , "destination" : "edge1" , "bw" : 100},
-			{ "source" : "core2" , "destination" : "edge2" , "bw" : 100},
-			{ "source" : "edge1" , "destination" : "edgeDevice_1" , "bw" : 100},
-			{ "source" : "edge2" , "destination" : "edgeDevice_2" , "bw" : 100}
+			{ "source" : "edge1" , "destination" : "edgeDevice_1" , "bw" : 100}
 		],
 		"ioTDevices":[
 			  {
@@ -199,62 +167,11 @@
 				   "bwSize":100,
 				   "storage":10000,
 				   "mips":10000
-			   },
-			   {
-				   "name":"edgeDevice_22",
-				   "pes" : 4,
-				   "ramSize":10000,
-				   "bwSize":100,
-				   "storage":10000,
-				   "mips":10000
-			   },
-			   {
-				   "name":"edgeDevice_23",
-				   "pes" : 4,
-				   "ramSize":10000,
-				   "bwSize":100,
-				   "storage":10000,
-				   "mips":10000
-			   },
-			   {
-				   "name":"edgeDevice_24",
-				   "pes" : 4,
-				   "ramSize":10000,
-				   "bwSize":100,
-				   "storage":10000,
-				   "mips":10000
 			   }
 		   ],
 		   "MELEntities":[
 			   {
 				   "name":"MEL.21",
-				   "bw":100,
-				   "mips":250,
-				   "ram":10000,
-				   "pesNumber":1,
-				   "vmm":"xxx",
-				   "cloudletSchedulerClassName":"org.cloudbus.cloudsim.CloudletSchedulerTimeShared"
-			   },
-			   {
-				   "name":"MEL.22",
-				   "bw":100,
-				   "mips":250,
-				   "ram":10000,
-				   "pesNumber":1,
-				   "vmm":"xxx",
-				   "cloudletSchedulerClassName":"org.cloudbus.cloudsim.CloudletSchedulerTimeShared"
-			   },
-			   {
-				   "name":"MEL.23",
-				   "bw":100,
-				   "mips":250,
-				   "ram":10000,
-				   "pesNumber":1,
-				   "vmm":"xxx",
-				   "cloudletSchedulerClassName":"org.cloudbus.cloudsim.CloudletSchedulerTimeShared"
-			   },
-			   {
-				   "name":"MEL.24",
 				   "bw":100,
 				   "mips":250,
 				   "ram":10000,
@@ -284,38 +201,8 @@
 				   "iops":1000000000
 			   },
 			   {
-				   "type" : "core",
-				   "name": "core22",
-				   "controller": "edge2_sdn1",
-				   "iops":1000000000
-			   },
-			   {
 				   "type" : "edge",
 				   "name": "edge21",
-				   "controller": "edge2_sdn1",
-				   "iops":1000000000
-			   },
-			   {
-				   "type" : "edge",
-				   "name": "edge22",
-				   "controller": "edge2_sdn1",
-				   "iops":1000000000
-			   },
-			   {
-				   "type" : "edge",
-				   "name": "edge23",
-				   "controller": "edge2_sdn1",
-				   "iops":1000000000
-			   },
-			   {
-				   "type" : "edge",
-				   "name": "edge24",
-				   "controller": "edge2_sdn1",
-				   "iops":1000000000
-			   },
-			   {
-				   "type" : "edge",
-				   "name": "edge25",
 				   "controller": "edge2_sdn1",
 				   "iops":1000000000
 			   }
@@ -323,16 +210,8 @@
 		   "links" :
 		   [
 			   { "source" : "core21" , "destination" : "edge2_gateway", "bw" : 100},
-			   { "source" : "core22" , "destination" : "edge2_gateway", "bw" : 100},
 			   { "source" : "core21" , "destination" : "edge21" , "bw" : 100},
-			   { "source" : "core21" , "destination" : "edge22" , "bw" : 100},
-			   { "source" : "core22" , "destination" : "edge23" , "bw" : 100},
-			   { "source" : "core22" , "destination" : "edge24" , "bw" : 100},
-			   { "source" : "core22" , "destination" : "edge25" , "bw" : 100},
-			   { "source" : "edge21" , "destination" : "edgeDevice_21" , "bw" : 100},
-			   { "source" : "edge22" , "destination" : "edgeDevice_22" , "bw" : 100},
-			   { "source" : "edge23" , "destination" : "edgeDevice_23" , "bw" : 100},
-			   { "source" : "edge24" , "destination" : "edgeDevice_24" , "bw" : 100}
+			   { "source" : "edge21" , "destination" : "edgeDevice_21" , "bw" : 100}
 		   ],
 		   "ioTDevices":[]
 	   }
@@ -419,21 +298,6 @@
 				"name": "core1",
 				"controller": "dc1_sdn1",
 				"iops":1000000000
-			},			{
-				"type" : "core",
-				"name": "core2",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},			{
-				"type" : "core",
-				"name": "core3",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},			{
-				"type" : "core",
-				"name": "core4",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
 			},
 			{
 				"type" : "aggregate",
@@ -442,92 +306,8 @@
 				"iops":1000000000
 			},
 			{
-				"type" : "aggregate",
-				"name": "aggregate2",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "aggregate",
-				"name": "aggregate3",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "aggregate",
-				"name": "aggregate4",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "aggregate",
-				"name": "aggregate5",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "aggregate",
-				"name": "aggregate6",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "aggregate",
-				"name": "aggregate7",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "aggregate",
-				"name": "aggregate8",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
 				"type" : "edge",
 				"name": "edge1",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge2",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge3",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge4",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge5",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge6",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge7",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge8",
 				"controller": "dc1_sdn1",
 				"iops":1000000000
 			}
@@ -535,54 +315,8 @@
 		"links" :
 		[
 			{ "source" : "core1" , "destination" : "dc1_gateway", "bw" : 1000},
-			{ "source" : "core2" , "destination" : "dc1_gateway", "bw" : 1000},
-			{ "source" : "core3" , "destination" : "dc1_gateway", "bw" : 1000},
-			{ "source" : "core4" , "destination" : "dc1_gateway", "bw" : 1000},
 			{ "source" : "core1" , "destination" : "aggregate1" , "bw" : 1000},
-			{ "source" : "core1" , "destination" : "aggregate3" , "bw" : 1000},
-			{ "source" : "core1" , "destination" : "aggregate5" , "bw" : 1000},
-			{ "source" : "core1" , "destination" : "aggregate7" , "bw" : 1000},
-
-			{ "source" : "core2" , "destination" : "aggregate1" , "bw" : 1000},
-			{ "source" : "core2" , "destination" : "aggregate3" , "bw" : 1000},
-			{ "source" : "core2" , "destination" : "aggregate5" , "bw" : 1000},
-			{ "source" : "core2" , "destination" : "aggregate7" , "bw" : 1000},
-
-			{ "source" : "core3" , "destination" : "aggregate2" , "bw" : 1000},
-			{ "source" : "core3" , "destination" : "aggregate4" , "bw" : 1000},
-			{ "source" : "core3" , "destination" : "aggregate6" , "bw" : 1000},
-			{ "source" : "core3" , "destination" : "aggregate8" , "bw" : 1000},
-
-			{ "source" : "core4" , "destination" : "aggregate2" , "bw" : 1000},
-			{ "source" : "core4" , "destination" : "aggregate4" , "bw" : 1000},
-			{ "source" : "core4" , "destination" : "aggregate6" , "bw" : 1000},
-			{ "source" : "core4" , "destination" : "aggregate8" , "bw" : 1000},
-
 			{ "source" : "aggregate1" , "destination" : "edge1" , "bw" : 1000},
-			{ "source" : "aggregate1" , "destination" : "edge2" , "bw" : 1000},
-
-			{ "source" : "aggregate2" , "destination" : "edge1" , "bw" : 1000},
-			{ "source" : "aggregate2" , "destination" : "edge2" , "bw" : 1000},
-
-			{ "source" : "aggregate3" , "destination" : "edge3" , "bw" : 1000},
-			{ "source" : "aggregate3" , "destination" : "edge4" , "bw" : 1000},
-
-			{ "source" : "aggregate4" , "destination" : "edge3" , "bw" : 1000},
-			{ "source" : "aggregate4" , "destination" : "edge4" , "bw" : 1000},
-
-			{ "source" : "aggregate5" , "destination" : "edge5" , "bw" : 1000},
-			{ "source" : "aggregate5" , "destination" : "edge6" , "bw" : 1000},
-
-			{ "source" : "aggregate6" , "destination" : "edge5" , "bw" : 1000},
-			{ "source" : "aggregate6" , "destination" : "edge6" , "bw" : 1000},
-
-			{ "source" : "aggregate7" , "destination" : "edge7" , "bw" : 1000},
-			{ "source" : "aggregate7" , "destination" : "edge8" , "bw" : 1000},
-
-			{ "source" : "aggregate8" , "destination" : "edge7" , "bw" : 1000},
-			{ "source" : "aggregate8" , "destination" : "edge8" , "bw" : 1000},
-
-
 			{ "source" : "edge1" , "destination" : "host1" , "bw" : 1000},
 			{ "source" : "edge1" , "destination" : "host2" , "bw" : 1000}
 		]
@@ -599,54 +333,15 @@
 		{
 			"type" : "gateway",
 			"name": "sdwan_router_1",
-			"controller": "dc2_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "gateway",
-			"name": "sdwan_router_2",
-			"controller": "dc3_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "gateway",
-			"name": "sdwan_router_3",
-			"controller": "dc3_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "gateway",
-			"name": "sdwan_router_4",
-			"controller": "dc3_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "gateway",
-			"name": "sdwan_router_5",
-			"controller": "dc3_sdn1",
-			"iops":1000000000
-		},
-		{
-			"type" : "gateway",
-			"name": "sdwan_router_6",
-			"controller": "dc3_sdn1",
+			"controller": "wan_sdn",
 			"iops":1000000000
 		}
 		],
 		"links": [
 			{ "source" : "edge1_gateway" , "destination" : "sdwan_router_1" , "bw" : 1000},
 			{ "source" : "edge2_gateway" , "destination" : "sdwan_router_1" , "bw" : 1000},
-			{ "source" : "sdwan_router_1" , "destination" : "sdwan_router_2" , "bw" : 1000},
-			{ "source" : "sdwan_router_1" , "destination" : "sdwan_router_3" , "bw" : 1000},
-			{ "source" : "sdwan_router_2" , "destination" : "sdwan_router_4" , "bw" : 1000},
-			{ "source" : "sdwan_router_2" , "destination" : "sdwan_router_5" , "bw" : 1000},
-			{ "source" : "sdwan_router_3" , "destination" : "sdwan_router_4" , "bw" : 1000},
-			{ "source" : "sdwan_router_3" , "destination" : "sdwan_router_5" , "bw" : 1000},
 
-			{ "source" : "sdwan_router_4" , "destination" : "sdwan_router_6" , "bw" : 1000},
-			{ "source" : "sdwan_router_5" , "destination" : "sdwan_router_6" , "bw" : 1000},
-
-			{ "source" : "dc1_gateway" , "destination" : "sdwan_router_6" , "bw" : 1000}
+			{ "source" : "dc1_gateway" , "destination" : "sdwan_router_1" , "bw" : 1000}
 		]
 	  }
   ]
