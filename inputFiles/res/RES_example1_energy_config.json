@@ -5,7 +5,7 @@
       "name": "Edge_1",
       "type": "edge",
       "energyManagementPolicy": {
-        "className": "ExportLimitEnergyManagementPolicy"
+        "className": "OnGridPolicy"
       },
       "utilization" : "50",
       "energyStorage": [
@@ -55,7 +55,7 @@
       "name": "Cloud_1",
       "type": "cloud",
       "energyManagementPolicy": {
-        "className": "ExportLimitWithEnergyStoragePolicy"
+        "className": "OnGridPolicy"
       },
       "utilization" : "40",
       "energyStorage": [

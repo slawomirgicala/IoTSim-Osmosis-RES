@@ -77,7 +77,8 @@ public class OsmesisAppsParser {
 					OsmesisEdgeletSize =	Long.parseLong(lineitems.poll());
 					MELOutput =	Long.parseLong(lineitems.poll());
 					VmName = lineitems.poll();		
-					OsmesisCloudlet = Long.parseLong(lineitems.poll());								
+					OsmesisCloudlet = Long.parseLong(lineitems.poll());
+
 					
 					OsmesisAppDescription appComposition = new OsmesisAppDescription(OsmesisAppName, appID, DataRate, StopDataGenerationTime,
 							IoTDeviceName,IoTDeviceOutput, MELName, OsmesisEdgeletSize, MELOutput, VmName, OsmesisCloudlet);

@@ -49,6 +49,8 @@ public abstract class IoTDevice extends SimEntity {
 	public abstract boolean updateBatteryByTransmission();
 	private double bw;
 	private double usedBw;
+	private double latitude;
+	private double longitude;
 
 	String associatedEdge;
 
@@ -239,5 +241,21 @@ public abstract class IoTDevice extends SimEntity {
 
 	public OsmosisRoutingTable getRoutingTable() {
 		return routingTable;
+	}
+
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
 	}
 }

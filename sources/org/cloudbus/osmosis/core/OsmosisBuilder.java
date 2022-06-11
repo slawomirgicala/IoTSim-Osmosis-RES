@@ -499,6 +499,9 @@ public class OsmosisBuilder {
 						location.velocity = iotDevice.getMobilityEntity().getVelocity();
 					}
 					newInstance.setMobility(location);
+
+					newInstance.setLatitude(iotDevice.getLatitude());
+					newInstance.setLongitude(iotDevice.getLongitude());
 	
 					devices.add(newInstance);						
 	
