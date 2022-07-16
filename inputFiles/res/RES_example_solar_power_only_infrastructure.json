@@ -304,21 +304,14 @@
 				"name": "aggregate1",
 				"controller": "dc1_sdn1",
 				"iops":1000000000
-			},
-			{
-				"type" : "edge",
-				"name": "edge1",
-				"controller": "dc1_sdn1",
-				"iops":1000000000
 			}
 		],
 		"links" :
 		[
 			{ "source" : "core1" , "destination" : "dc1_gateway", "bw" : 1000},
 			{ "source" : "core1" , "destination" : "aggregate1" , "bw" : 1000},
-			{ "source" : "aggregate1" , "destination" : "edge1" , "bw" : 1000},
-			{ "source" : "edge1" , "destination" : "host1" , "bw" : 1000},
-			{ "source" : "edge1" , "destination" : "host2" , "bw" : 1000}
+			{ "source" : "aggregate1" , "destination" : "host1" , "bw" : 1000},
+			{ "source" : "aggregate1" , "destination" : "host2" , "bw" : 1000}
 		]
 	 }
 	],

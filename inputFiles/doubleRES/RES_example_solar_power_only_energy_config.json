@@ -1,0 +1,2308 @@
+{
+    "cloudDatacenters": [
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": "40",
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.35,
+                        "longitude": -6.3
+                    },
+                    "loss": "14",
+                    "name": "Photovoltaic_panels_1",
+                    "peakPower": 1000,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "500",
+                    "currentEnergy": "10",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Cloud_1",
+            "powerGrid": [
+                {
+                    "country": "Ireland",
+                    "emissionCO2": "252",
+                    "lowEmission": "62",
+                    "priceForEnergy": "0.196",
+                    "renewable": "60"
+                }
+            ],
+            "type": "cloud",
+            "utilization": "30"
+        }
+    ],
+    "edgeDatacenters": [
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.599236,
+                        "longitude": 18.815035
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_1",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_1",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.7981816,
+                        "longitude": 21.5772462
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_2",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_2",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.74736505,
+                        "longitude": 18.079590087700034
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_3",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_3",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.61030395,
+                        "longitude": 20.714936589668028
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_4",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_4",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.1568464,
+                        "longitude": 15.4025965
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_5",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_5",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.5734742,
+                        "longitude": 16.85914116335919
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_6",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_6",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.81207845,
+                        "longitude": 19.029198802013944
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_7",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_7",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.102712499999996,
+                        "longitude": 22.931878217494493
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_8",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_8",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.8501049,
+                        "longitude": 15.653749235408073
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_9",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_9",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.7767239,
+                        "longitude": 20.47778052818325
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_10",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_10",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.4689014,
+                        "longitude": 22.3303816
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_11",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_11",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.8141172,
+                        "longitude": 20.6875924
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_12",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_12",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.721273,
+                        "longitude": 23.259588703837892
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_13",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_13",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.0145361,
+                        "longitude": 18.596583144651557
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_14",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_14",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.8436068,
+                        "longitude": 16.58042182076424
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_15",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_15",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.2205345,
+                        "longitude": 18.5701081
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_16",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_16",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.0683321,
+                        "longitude": 19.80020493611366
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_17",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_17",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.025988299999995,
+                        "longitude": 20.96405842696229
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_18",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_18",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.1511324,
+                        "longitude": 16.7380343
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_19",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_19",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.1661431,
+                        "longitude": 20.9873566
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_20",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_20",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.92766315,
+                        "longitude": 15.549005417916433
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_21",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_21",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.7359438,
+                        "longitude": 15.7397826
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_22",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_22",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.132398,
+                        "longitude": 23.1591679
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_23",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_23",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.0904247,
+                        "longitude": 18.215141180318078
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_24",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_24",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.0819763,
+                        "longitude": 21.376828104006
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_25",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_25",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.3362245,
+                        "longitude": 18.9332407
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_26",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_26",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.2969446,
+                        "longitude": 19.950659
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_27",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_27",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.535347099999996,
+                        "longitude": 19.713630138580008
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_28",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_28",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.43371175,
+                        "longitude": 16.642246491692106
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_29",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_29",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.1160961,
+                        "longitude": 22.0547134
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_30",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_30",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.1051232,
+                        "longitude": 16.88107379697871
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_31",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_31",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.5849678,
+                        "longitude": 21.549883
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_32",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_32",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.7209139,
+                        "longitude": 19.3592771
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_33",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_33",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.8089997,
+                        "longitude": 19.1244089281233
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_34",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_34",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.3549202,
+                        "longitude": 19.8890802
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_35",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_35",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.19092,
+                        "longitude": 16.17707
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_36",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_36",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.42968095,
+                        "longitude": 14.592912670292268
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_37",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_37",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.68898435,
+                        "longitude": 21.75347880451494
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_38",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_38",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.22180125,
+                        "longitude": 22.39608394712893
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_39",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_39",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.9097477,
+                        "longitude": 14.2510703
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_40",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_40",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.76358365,
+                        "longitude": 15.393625933938326
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_41",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_41",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.678792900000005,
+                        "longitude": 17.929884436033525
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_42",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_42",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.2318014,
+                        "longitude": 19.9815609
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_43",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_43",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.0765155,
+                        "longitude": 23.62223356965026
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_44",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_44",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.54154425,
+                        "longitude": 23.528801875901806
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_45",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_45",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.7604388,
+                        "longitude": 17.531376945616415
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_46",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_46",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.218872,
+                        "longitude": 19.5433063
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_47",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_47",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.161593800000006,
+                        "longitude": 22.281253302988254
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_48",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_48",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.2258007,
+                        "longitude": 19.0152132
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_49",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_49",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 50.6793066,
+                        "longitude": 21.7495055
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_50",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_50",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.433584350000004,
+                        "longitude": 16.850318701127975
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_51",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_51",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 54.5391501,
+                        "longitude": 17.7472272
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_52",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_52",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 51.204768900000005,
+                        "longitude": 16.174675034638256
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_53",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_53",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.6999165,
+                        "longitude": 17.570344138115953
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_54",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_54",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.3412273,
+                        "longitude": 14.549452
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_55",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_55",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 53.13419145,
+                        "longitude": 20.362882994720415
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_56",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_56",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 52.73057555,
+                        "longitude": 15.210755319093852
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_57",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_57",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        },
+        {
+            "energyManagementPolicy": {
+                "className": "OnGridPolicy"
+            },
+            "energySources": [
+                {
+                    "angle": 50,
+                    "location": {
+                        "elevation": 0.0,
+                        "latitude": 49.244768199999996,
+                        "longitude": 20.00608263498963
+                    },
+                    "loss": 14,
+                    "name": "Photovoltaic_panels_58",
+                    "peakPower": 50,
+                    "technology": "crystSi",
+                    "type": "PV_PANELS"
+                }
+            ],
+            "energyStorage": [
+                {
+                    "capacity": "100",
+                    "currentEnergy": "20",
+                    "type": "BATTERY"
+                }
+            ],
+            "name": "Edge_58",
+            "powerGrid": [
+                {
+                    "country": "Poland",
+                    "emissionCO2": "303",
+                    "lowEmission": "65",
+                    "priceForEnergy": "0.148",
+                    "renewable": "48"
+                }
+            ],
+            "type": "edge",
+            "utilization": "50"
+        }
+    ],
+    "simulationDate": "20160101:0000"
+}

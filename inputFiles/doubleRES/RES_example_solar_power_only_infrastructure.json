@@ -1,0 +1,5425 @@
+{
+    "cloudDatacenter": [
+        {
+            "VMs": [
+                {
+                    "bw": 1000,
+                    "cloudletPolicy": "TimeShared",
+                    "mips": 250,
+                    "name": "VM_1",
+                    "pes": 2,
+                    "ram": 512,
+                    "storage": 10000
+                },
+                {
+                    "bw": 1000,
+                    "cloudletPolicy": "TimeShared",
+                    "mips": 250,
+                    "name": "VM_2",
+                    "pes": 2,
+                    "ram": 512,
+                    "storage": 10000
+                },
+                {
+                    "bw": 1000,
+                    "cloudletPolicy": "TimeShared",
+                    "mips": 250,
+                    "name": "VM_3",
+                    "pes": 2,
+                    "ram": 512,
+                    "storage": 10000
+                }
+            ],
+            "controllers": [
+                {
+                    "name": "dc1_sdn1",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bw": 10000,
+                    "mips": 1250,
+                    "name": "host1",
+                    "pes": 4,
+                    "ram": 32750,
+                    "storage": 6400000000000
+                },
+                {
+                    "bw": 10000,
+                    "mips": 1250,
+                    "name": "host2",
+                    "pes": 4,
+                    "ram": 32750,
+                    "storage": 6400000000000
+                }
+            ],
+            "links": [
+                {
+                    "bw": 1000,
+                    "destination": "dc1_gateway",
+                    "source": "core1"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "aggregate1",
+                    "source": "core1"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "host1",
+                    "source": "aggregate1"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "host2",
+                    "source": "aggregate1"
+                }
+            ],
+            "name": "Cloud_1",
+            "switches": [
+                {
+                    "controller": "dc1_sdn1",
+                    "iops": 1000000000,
+                    "name": "dc1_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "dc1_sdn1",
+                    "iops": 1000000000,
+                    "name": "core1",
+                    "type": "core"
+                },
+                {
+                    "controller": "dc1_sdn1",
+                    "iops": 1000000000,
+                    "name": "aggregate1",
+                    "type": "aggregate"
+                }
+            ],
+            "type": "cloud",
+            "vmAllocationPolicy": "VmAllocationPolicyCombinedLeastFullFirst"
+        }
+    ],
+    "edgeDatacenter": [
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.1",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_1",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_1",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [
+                {
+                    "battery_sending_rate": 0.0001,
+                    "battery_sensing_rate": 0.0001,
+                    "bw": 100,
+                    "ioTClassName": "org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
+                    "latitude": 48,
+                    "longitude": 2,
+                    "max_battery_capacity": 100.0,
+                    "mobilityEntity": {
+                        "location": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "movable": false
+                    },
+                    "name": "iot_device_1",
+                    "networkModelEntity": {
+                        "communicationProtocol": "xmpp",
+                        "networkType": "wifi"
+                    }
+                },
+                {
+                    "battery_sending_rate": 0.0001,
+                    "battery_sensing_rate": 0.0001,
+                    "bw": 100,
+                    "ioTClassName": "org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
+                    "latitude": 52.52,
+                    "longitude": 13.4,
+                    "max_battery_capacity": 100.0,
+                    "mobilityEntity": {
+                        "location": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "movable": false
+                    },
+                    "name": "iot_device_2",
+                    "networkModelEntity": {
+                        "communicationProtocol": "xmpp",
+                        "networkType": "wifi"
+                    }
+                },
+                {
+                    "battery_sending_rate": 0.0001,
+                    "battery_sensing_rate": 0.0001,
+                    "bw": 100,
+                    "ioTClassName": "org.cloudbus.cloudsim.edge.iot.TemperatureSensor",
+                    "latitude": 52.52,
+                    "longitude": 13.4,
+                    "max_battery_capacity": 100.0,
+                    "mobilityEntity": {
+                        "location": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "movable": false
+                    },
+                    "name": "iot_device_3",
+                    "networkModelEntity": {
+                        "communicationProtocol": "xmpp",
+                        "networkType": "wifi"
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_1_core",
+                    "source": "edge_1_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_1_device",
+                    "source": "edge_1_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_1",
+                    "source": "edge_1_device"
+                }
+            ],
+            "name": "Edge_1",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_1",
+                    "iops": 1000000000,
+                    "name": "edge_1_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_1",
+                    "iops": 1000000000,
+                    "name": "edge_1_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_1",
+                    "iops": 1000000000,
+                    "name": "edge_1_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.2",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_2",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_2",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_2_core",
+                    "source": "edge_2_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_2_device",
+                    "source": "edge_2_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_2",
+                    "source": "edge_2_device"
+                }
+            ],
+            "name": "Edge_2",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_2",
+                    "iops": 1000000000,
+                    "name": "edge_2_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_2",
+                    "iops": 1000000000,
+                    "name": "edge_2_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_2",
+                    "iops": 1000000000,
+                    "name": "edge_2_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.3",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_3",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_3",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_3_core",
+                    "source": "edge_3_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_3_device",
+                    "source": "edge_3_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_3",
+                    "source": "edge_3_device"
+                }
+            ],
+            "name": "Edge_3",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_3",
+                    "iops": 1000000000,
+                    "name": "edge_3_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_3",
+                    "iops": 1000000000,
+                    "name": "edge_3_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_3",
+                    "iops": 1000000000,
+                    "name": "edge_3_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.4",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_4",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_4",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_4_core",
+                    "source": "edge_4_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_4_device",
+                    "source": "edge_4_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_4",
+                    "source": "edge_4_device"
+                }
+            ],
+            "name": "Edge_4",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_4",
+                    "iops": 1000000000,
+                    "name": "edge_4_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_4",
+                    "iops": 1000000000,
+                    "name": "edge_4_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_4",
+                    "iops": 1000000000,
+                    "name": "edge_4_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.5",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_5",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_5",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_5_core",
+                    "source": "edge_5_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_5_device",
+                    "source": "edge_5_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_5",
+                    "source": "edge_5_device"
+                }
+            ],
+            "name": "Edge_5",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_5",
+                    "iops": 1000000000,
+                    "name": "edge_5_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_5",
+                    "iops": 1000000000,
+                    "name": "edge_5_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_5",
+                    "iops": 1000000000,
+                    "name": "edge_5_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.6",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_6",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_6",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_6_core",
+                    "source": "edge_6_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_6_device",
+                    "source": "edge_6_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_6",
+                    "source": "edge_6_device"
+                }
+            ],
+            "name": "Edge_6",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_6",
+                    "iops": 1000000000,
+                    "name": "edge_6_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_6",
+                    "iops": 1000000000,
+                    "name": "edge_6_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_6",
+                    "iops": 1000000000,
+                    "name": "edge_6_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.7",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_7",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_7",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_7_core",
+                    "source": "edge_7_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_7_device",
+                    "source": "edge_7_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_7",
+                    "source": "edge_7_device"
+                }
+            ],
+            "name": "Edge_7",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_7",
+                    "iops": 1000000000,
+                    "name": "edge_7_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_7",
+                    "iops": 1000000000,
+                    "name": "edge_7_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_7",
+                    "iops": 1000000000,
+                    "name": "edge_7_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.8",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_8",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_8",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_8_core",
+                    "source": "edge_8_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_8_device",
+                    "source": "edge_8_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_8",
+                    "source": "edge_8_device"
+                }
+            ],
+            "name": "Edge_8",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_8",
+                    "iops": 1000000000,
+                    "name": "edge_8_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_8",
+                    "iops": 1000000000,
+                    "name": "edge_8_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_8",
+                    "iops": 1000000000,
+                    "name": "edge_8_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.9",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_9",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_9",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_9_core",
+                    "source": "edge_9_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_9_device",
+                    "source": "edge_9_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_9",
+                    "source": "edge_9_device"
+                }
+            ],
+            "name": "Edge_9",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_9",
+                    "iops": 1000000000,
+                    "name": "edge_9_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_9",
+                    "iops": 1000000000,
+                    "name": "edge_9_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_9",
+                    "iops": 1000000000,
+                    "name": "edge_9_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.10",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_10",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_10",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_10_core",
+                    "source": "edge_10_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_10_device",
+                    "source": "edge_10_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_10",
+                    "source": "edge_10_device"
+                }
+            ],
+            "name": "Edge_10",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_10",
+                    "iops": 1000000000,
+                    "name": "edge_10_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_10",
+                    "iops": 1000000000,
+                    "name": "edge_10_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_10",
+                    "iops": 1000000000,
+                    "name": "edge_10_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.11",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_11",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_11",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_11_core",
+                    "source": "edge_11_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_11_device",
+                    "source": "edge_11_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_11",
+                    "source": "edge_11_device"
+                }
+            ],
+            "name": "Edge_11",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_11",
+                    "iops": 1000000000,
+                    "name": "edge_11_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_11",
+                    "iops": 1000000000,
+                    "name": "edge_11_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_11",
+                    "iops": 1000000000,
+                    "name": "edge_11_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.12",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_12",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_12",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_12_core",
+                    "source": "edge_12_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_12_device",
+                    "source": "edge_12_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_12",
+                    "source": "edge_12_device"
+                }
+            ],
+            "name": "Edge_12",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_12",
+                    "iops": 1000000000,
+                    "name": "edge_12_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_12",
+                    "iops": 1000000000,
+                    "name": "edge_12_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_12",
+                    "iops": 1000000000,
+                    "name": "edge_12_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.13",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_13",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_13",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_13_core",
+                    "source": "edge_13_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_13_device",
+                    "source": "edge_13_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_13",
+                    "source": "edge_13_device"
+                }
+            ],
+            "name": "Edge_13",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_13",
+                    "iops": 1000000000,
+                    "name": "edge_13_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_13",
+                    "iops": 1000000000,
+                    "name": "edge_13_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_13",
+                    "iops": 1000000000,
+                    "name": "edge_13_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.14",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_14",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_14",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_14_core",
+                    "source": "edge_14_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_14_device",
+                    "source": "edge_14_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_14",
+                    "source": "edge_14_device"
+                }
+            ],
+            "name": "Edge_14",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_14",
+                    "iops": 1000000000,
+                    "name": "edge_14_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_14",
+                    "iops": 1000000000,
+                    "name": "edge_14_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_14",
+                    "iops": 1000000000,
+                    "name": "edge_14_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.15",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_15",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_15",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_15_core",
+                    "source": "edge_15_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_15_device",
+                    "source": "edge_15_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_15",
+                    "source": "edge_15_device"
+                }
+            ],
+            "name": "Edge_15",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_15",
+                    "iops": 1000000000,
+                    "name": "edge_15_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_15",
+                    "iops": 1000000000,
+                    "name": "edge_15_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_15",
+                    "iops": 1000000000,
+                    "name": "edge_15_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.16",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_16",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_16",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_16_core",
+                    "source": "edge_16_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_16_device",
+                    "source": "edge_16_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_16",
+                    "source": "edge_16_device"
+                }
+            ],
+            "name": "Edge_16",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_16",
+                    "iops": 1000000000,
+                    "name": "edge_16_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_16",
+                    "iops": 1000000000,
+                    "name": "edge_16_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_16",
+                    "iops": 1000000000,
+                    "name": "edge_16_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.17",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_17",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_17",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_17_core",
+                    "source": "edge_17_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_17_device",
+                    "source": "edge_17_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_17",
+                    "source": "edge_17_device"
+                }
+            ],
+            "name": "Edge_17",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_17",
+                    "iops": 1000000000,
+                    "name": "edge_17_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_17",
+                    "iops": 1000000000,
+                    "name": "edge_17_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_17",
+                    "iops": 1000000000,
+                    "name": "edge_17_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.18",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_18",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_18",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_18_core",
+                    "source": "edge_18_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_18_device",
+                    "source": "edge_18_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_18",
+                    "source": "edge_18_device"
+                }
+            ],
+            "name": "Edge_18",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_18",
+                    "iops": 1000000000,
+                    "name": "edge_18_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_18",
+                    "iops": 1000000000,
+                    "name": "edge_18_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_18",
+                    "iops": 1000000000,
+                    "name": "edge_18_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.19",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_19",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_19",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_19_core",
+                    "source": "edge_19_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_19_device",
+                    "source": "edge_19_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_19",
+                    "source": "edge_19_device"
+                }
+            ],
+            "name": "Edge_19",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_19",
+                    "iops": 1000000000,
+                    "name": "edge_19_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_19",
+                    "iops": 1000000000,
+                    "name": "edge_19_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_19",
+                    "iops": 1000000000,
+                    "name": "edge_19_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.20",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_20",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_20",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_20_core",
+                    "source": "edge_20_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_20_device",
+                    "source": "edge_20_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_20",
+                    "source": "edge_20_device"
+                }
+            ],
+            "name": "Edge_20",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_20",
+                    "iops": 1000000000,
+                    "name": "edge_20_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_20",
+                    "iops": 1000000000,
+                    "name": "edge_20_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_20",
+                    "iops": 1000000000,
+                    "name": "edge_20_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.21",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_21",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_21",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_21_core",
+                    "source": "edge_21_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_21_device",
+                    "source": "edge_21_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_21",
+                    "source": "edge_21_device"
+                }
+            ],
+            "name": "Edge_21",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_21",
+                    "iops": 1000000000,
+                    "name": "edge_21_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_21",
+                    "iops": 1000000000,
+                    "name": "edge_21_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_21",
+                    "iops": 1000000000,
+                    "name": "edge_21_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.22",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_22",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_22",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_22_core",
+                    "source": "edge_22_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_22_device",
+                    "source": "edge_22_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_22",
+                    "source": "edge_22_device"
+                }
+            ],
+            "name": "Edge_22",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_22",
+                    "iops": 1000000000,
+                    "name": "edge_22_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_22",
+                    "iops": 1000000000,
+                    "name": "edge_22_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_22",
+                    "iops": 1000000000,
+                    "name": "edge_22_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.23",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_23",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_23",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_23_core",
+                    "source": "edge_23_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_23_device",
+                    "source": "edge_23_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_23",
+                    "source": "edge_23_device"
+                }
+            ],
+            "name": "Edge_23",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_23",
+                    "iops": 1000000000,
+                    "name": "edge_23_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_23",
+                    "iops": 1000000000,
+                    "name": "edge_23_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_23",
+                    "iops": 1000000000,
+                    "name": "edge_23_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.24",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_24",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_24",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_24_core",
+                    "source": "edge_24_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_24_device",
+                    "source": "edge_24_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_24",
+                    "source": "edge_24_device"
+                }
+            ],
+            "name": "Edge_24",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_24",
+                    "iops": 1000000000,
+                    "name": "edge_24_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_24",
+                    "iops": 1000000000,
+                    "name": "edge_24_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_24",
+                    "iops": 1000000000,
+                    "name": "edge_24_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.25",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_25",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_25",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_25_core",
+                    "source": "edge_25_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_25_device",
+                    "source": "edge_25_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_25",
+                    "source": "edge_25_device"
+                }
+            ],
+            "name": "Edge_25",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_25",
+                    "iops": 1000000000,
+                    "name": "edge_25_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_25",
+                    "iops": 1000000000,
+                    "name": "edge_25_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_25",
+                    "iops": 1000000000,
+                    "name": "edge_25_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.26",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_26",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_26",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_26_core",
+                    "source": "edge_26_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_26_device",
+                    "source": "edge_26_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_26",
+                    "source": "edge_26_device"
+                }
+            ],
+            "name": "Edge_26",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_26",
+                    "iops": 1000000000,
+                    "name": "edge_26_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_26",
+                    "iops": 1000000000,
+                    "name": "edge_26_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_26",
+                    "iops": 1000000000,
+                    "name": "edge_26_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.27",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_27",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_27",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_27_core",
+                    "source": "edge_27_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_27_device",
+                    "source": "edge_27_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_27",
+                    "source": "edge_27_device"
+                }
+            ],
+            "name": "Edge_27",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_27",
+                    "iops": 1000000000,
+                    "name": "edge_27_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_27",
+                    "iops": 1000000000,
+                    "name": "edge_27_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_27",
+                    "iops": 1000000000,
+                    "name": "edge_27_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.28",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_28",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_28",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_28_core",
+                    "source": "edge_28_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_28_device",
+                    "source": "edge_28_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_28",
+                    "source": "edge_28_device"
+                }
+            ],
+            "name": "Edge_28",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_28",
+                    "iops": 1000000000,
+                    "name": "edge_28_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_28",
+                    "iops": 1000000000,
+                    "name": "edge_28_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_28",
+                    "iops": 1000000000,
+                    "name": "edge_28_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.29",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_29",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_29",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_29_core",
+                    "source": "edge_29_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_29_device",
+                    "source": "edge_29_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_29",
+                    "source": "edge_29_device"
+                }
+            ],
+            "name": "Edge_29",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_29",
+                    "iops": 1000000000,
+                    "name": "edge_29_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_29",
+                    "iops": 1000000000,
+                    "name": "edge_29_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_29",
+                    "iops": 1000000000,
+                    "name": "edge_29_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.30",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_30",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_30",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_30_core",
+                    "source": "edge_30_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_30_device",
+                    "source": "edge_30_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_30",
+                    "source": "edge_30_device"
+                }
+            ],
+            "name": "Edge_30",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_30",
+                    "iops": 1000000000,
+                    "name": "edge_30_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_30",
+                    "iops": 1000000000,
+                    "name": "edge_30_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_30",
+                    "iops": 1000000000,
+                    "name": "edge_30_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.31",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_31",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_31",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_31_core",
+                    "source": "edge_31_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_31_device",
+                    "source": "edge_31_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_31",
+                    "source": "edge_31_device"
+                }
+            ],
+            "name": "Edge_31",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_31",
+                    "iops": 1000000000,
+                    "name": "edge_31_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_31",
+                    "iops": 1000000000,
+                    "name": "edge_31_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_31",
+                    "iops": 1000000000,
+                    "name": "edge_31_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.32",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_32",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_32",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_32_core",
+                    "source": "edge_32_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_32_device",
+                    "source": "edge_32_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_32",
+                    "source": "edge_32_device"
+                }
+            ],
+            "name": "Edge_32",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_32",
+                    "iops": 1000000000,
+                    "name": "edge_32_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_32",
+                    "iops": 1000000000,
+                    "name": "edge_32_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_32",
+                    "iops": 1000000000,
+                    "name": "edge_32_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.33",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_33",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_33",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_33_core",
+                    "source": "edge_33_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_33_device",
+                    "source": "edge_33_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_33",
+                    "source": "edge_33_device"
+                }
+            ],
+            "name": "Edge_33",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_33",
+                    "iops": 1000000000,
+                    "name": "edge_33_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_33",
+                    "iops": 1000000000,
+                    "name": "edge_33_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_33",
+                    "iops": 1000000000,
+                    "name": "edge_33_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.34",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_34",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_34",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_34_core",
+                    "source": "edge_34_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_34_device",
+                    "source": "edge_34_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_34",
+                    "source": "edge_34_device"
+                }
+            ],
+            "name": "Edge_34",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_34",
+                    "iops": 1000000000,
+                    "name": "edge_34_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_34",
+                    "iops": 1000000000,
+                    "name": "edge_34_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_34",
+                    "iops": 1000000000,
+                    "name": "edge_34_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.35",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_35",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_35",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_35_core",
+                    "source": "edge_35_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_35_device",
+                    "source": "edge_35_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_35",
+                    "source": "edge_35_device"
+                }
+            ],
+            "name": "Edge_35",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_35",
+                    "iops": 1000000000,
+                    "name": "edge_35_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_35",
+                    "iops": 1000000000,
+                    "name": "edge_35_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_35",
+                    "iops": 1000000000,
+                    "name": "edge_35_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.36",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_36",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_36",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_36_core",
+                    "source": "edge_36_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_36_device",
+                    "source": "edge_36_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_36",
+                    "source": "edge_36_device"
+                }
+            ],
+            "name": "Edge_36",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_36",
+                    "iops": 1000000000,
+                    "name": "edge_36_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_36",
+                    "iops": 1000000000,
+                    "name": "edge_36_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_36",
+                    "iops": 1000000000,
+                    "name": "edge_36_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.37",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_37",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_37",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_37_core",
+                    "source": "edge_37_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_37_device",
+                    "source": "edge_37_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_37",
+                    "source": "edge_37_device"
+                }
+            ],
+            "name": "Edge_37",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_37",
+                    "iops": 1000000000,
+                    "name": "edge_37_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_37",
+                    "iops": 1000000000,
+                    "name": "edge_37_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_37",
+                    "iops": 1000000000,
+                    "name": "edge_37_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.38",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_38",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_38",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_38_core",
+                    "source": "edge_38_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_38_device",
+                    "source": "edge_38_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_38",
+                    "source": "edge_38_device"
+                }
+            ],
+            "name": "Edge_38",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_38",
+                    "iops": 1000000000,
+                    "name": "edge_38_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_38",
+                    "iops": 1000000000,
+                    "name": "edge_38_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_38",
+                    "iops": 1000000000,
+                    "name": "edge_38_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.39",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_39",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_39",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_39_core",
+                    "source": "edge_39_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_39_device",
+                    "source": "edge_39_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_39",
+                    "source": "edge_39_device"
+                }
+            ],
+            "name": "Edge_39",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_39",
+                    "iops": 1000000000,
+                    "name": "edge_39_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_39",
+                    "iops": 1000000000,
+                    "name": "edge_39_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_39",
+                    "iops": 1000000000,
+                    "name": "edge_39_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.40",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_40",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_40",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_40_core",
+                    "source": "edge_40_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_40_device",
+                    "source": "edge_40_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_40",
+                    "source": "edge_40_device"
+                }
+            ],
+            "name": "Edge_40",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_40",
+                    "iops": 1000000000,
+                    "name": "edge_40_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_40",
+                    "iops": 1000000000,
+                    "name": "edge_40_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_40",
+                    "iops": 1000000000,
+                    "name": "edge_40_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.41",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_41",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_41",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_41_core",
+                    "source": "edge_41_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_41_device",
+                    "source": "edge_41_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_41",
+                    "source": "edge_41_device"
+                }
+            ],
+            "name": "Edge_41",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_41",
+                    "iops": 1000000000,
+                    "name": "edge_41_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_41",
+                    "iops": 1000000000,
+                    "name": "edge_41_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_41",
+                    "iops": 1000000000,
+                    "name": "edge_41_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.42",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_42",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_42",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_42_core",
+                    "source": "edge_42_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_42_device",
+                    "source": "edge_42_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_42",
+                    "source": "edge_42_device"
+                }
+            ],
+            "name": "Edge_42",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_42",
+                    "iops": 1000000000,
+                    "name": "edge_42_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_42",
+                    "iops": 1000000000,
+                    "name": "edge_42_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_42",
+                    "iops": 1000000000,
+                    "name": "edge_42_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.43",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_43",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_43",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_43_core",
+                    "source": "edge_43_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_43_device",
+                    "source": "edge_43_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_43",
+                    "source": "edge_43_device"
+                }
+            ],
+            "name": "Edge_43",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_43",
+                    "iops": 1000000000,
+                    "name": "edge_43_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_43",
+                    "iops": 1000000000,
+                    "name": "edge_43_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_43",
+                    "iops": 1000000000,
+                    "name": "edge_43_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.44",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_44",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_44",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_44_core",
+                    "source": "edge_44_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_44_device",
+                    "source": "edge_44_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_44",
+                    "source": "edge_44_device"
+                }
+            ],
+            "name": "Edge_44",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_44",
+                    "iops": 1000000000,
+                    "name": "edge_44_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_44",
+                    "iops": 1000000000,
+                    "name": "edge_44_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_44",
+                    "iops": 1000000000,
+                    "name": "edge_44_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.45",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_45",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_45",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_45_core",
+                    "source": "edge_45_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_45_device",
+                    "source": "edge_45_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_45",
+                    "source": "edge_45_device"
+                }
+            ],
+            "name": "Edge_45",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_45",
+                    "iops": 1000000000,
+                    "name": "edge_45_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_45",
+                    "iops": 1000000000,
+                    "name": "edge_45_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_45",
+                    "iops": 1000000000,
+                    "name": "edge_45_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.46",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_46",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_46",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_46_core",
+                    "source": "edge_46_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_46_device",
+                    "source": "edge_46_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_46",
+                    "source": "edge_46_device"
+                }
+            ],
+            "name": "Edge_46",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_46",
+                    "iops": 1000000000,
+                    "name": "edge_46_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_46",
+                    "iops": 1000000000,
+                    "name": "edge_46_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_46",
+                    "iops": 1000000000,
+                    "name": "edge_46_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.47",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_47",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_47",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_47_core",
+                    "source": "edge_47_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_47_device",
+                    "source": "edge_47_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_47",
+                    "source": "edge_47_device"
+                }
+            ],
+            "name": "Edge_47",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_47",
+                    "iops": 1000000000,
+                    "name": "edge_47_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_47",
+                    "iops": 1000000000,
+                    "name": "edge_47_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_47",
+                    "iops": 1000000000,
+                    "name": "edge_47_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.48",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_48",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_48",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_48_core",
+                    "source": "edge_48_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_48_device",
+                    "source": "edge_48_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_48",
+                    "source": "edge_48_device"
+                }
+            ],
+            "name": "Edge_48",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_48",
+                    "iops": 1000000000,
+                    "name": "edge_48_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_48",
+                    "iops": 1000000000,
+                    "name": "edge_48_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_48",
+                    "iops": 1000000000,
+                    "name": "edge_48_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.49",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_49",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_49",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_49_core",
+                    "source": "edge_49_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_49_device",
+                    "source": "edge_49_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_49",
+                    "source": "edge_49_device"
+                }
+            ],
+            "name": "Edge_49",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_49",
+                    "iops": 1000000000,
+                    "name": "edge_49_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_49",
+                    "iops": 1000000000,
+                    "name": "edge_49_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_49",
+                    "iops": 1000000000,
+                    "name": "edge_49_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.50",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_50",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_50",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_50_core",
+                    "source": "edge_50_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_50_device",
+                    "source": "edge_50_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_50",
+                    "source": "edge_50_device"
+                }
+            ],
+            "name": "Edge_50",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_50",
+                    "iops": 1000000000,
+                    "name": "edge_50_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_50",
+                    "iops": 1000000000,
+                    "name": "edge_50_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_50",
+                    "iops": 1000000000,
+                    "name": "edge_50_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.51",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_51",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_51",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_51_core",
+                    "source": "edge_51_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_51_device",
+                    "source": "edge_51_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_51",
+                    "source": "edge_51_device"
+                }
+            ],
+            "name": "Edge_51",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_51",
+                    "iops": 1000000000,
+                    "name": "edge_51_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_51",
+                    "iops": 1000000000,
+                    "name": "edge_51_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_51",
+                    "iops": 1000000000,
+                    "name": "edge_51_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.52",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_52",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_52",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_52_core",
+                    "source": "edge_52_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_52_device",
+                    "source": "edge_52_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_52",
+                    "source": "edge_52_device"
+                }
+            ],
+            "name": "Edge_52",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_52",
+                    "iops": 1000000000,
+                    "name": "edge_52_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_52",
+                    "iops": 1000000000,
+                    "name": "edge_52_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_52",
+                    "iops": 1000000000,
+                    "name": "edge_52_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.53",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_53",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_53",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_53_core",
+                    "source": "edge_53_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_53_device",
+                    "source": "edge_53_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_53",
+                    "source": "edge_53_device"
+                }
+            ],
+            "name": "Edge_53",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_53",
+                    "iops": 1000000000,
+                    "name": "edge_53_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_53",
+                    "iops": 1000000000,
+                    "name": "edge_53_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_53",
+                    "iops": 1000000000,
+                    "name": "edge_53_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.54",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_54",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_54",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_54_core",
+                    "source": "edge_54_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_54_device",
+                    "source": "edge_54_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_54",
+                    "source": "edge_54_device"
+                }
+            ],
+            "name": "Edge_54",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_54",
+                    "iops": 1000000000,
+                    "name": "edge_54_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_54",
+                    "iops": 1000000000,
+                    "name": "edge_54_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_54",
+                    "iops": 1000000000,
+                    "name": "edge_54_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.55",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_55",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_55",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_55_core",
+                    "source": "edge_55_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_55_device",
+                    "source": "edge_55_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_55",
+                    "source": "edge_55_device"
+                }
+            ],
+            "name": "Edge_55",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_55",
+                    "iops": 1000000000,
+                    "name": "edge_55_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_55",
+                    "iops": 1000000000,
+                    "name": "edge_55_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_55",
+                    "iops": 1000000000,
+                    "name": "edge_55_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.56",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_56",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_56",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_56_core",
+                    "source": "edge_56_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_56_device",
+                    "source": "edge_56_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_56",
+                    "source": "edge_56_device"
+                }
+            ],
+            "name": "Edge_56",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_56",
+                    "iops": 1000000000,
+                    "name": "edge_56_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_56",
+                    "iops": 1000000000,
+                    "name": "edge_56_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_56",
+                    "iops": 1000000000,
+                    "name": "edge_56_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.57",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_57",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_57",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_57_core",
+                    "source": "edge_57_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_57_device",
+                    "source": "edge_57_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_57",
+                    "source": "edge_57_device"
+                }
+            ],
+            "name": "Edge_57",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_57",
+                    "iops": 1000000000,
+                    "name": "edge_57_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_57",
+                    "iops": 1000000000,
+                    "name": "edge_57_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_57",
+                    "iops": 1000000000,
+                    "name": "edge_57_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        },
+        {
+            "MELEntities": [
+                {
+                    "bw": 100,
+                    "cloudletSchedulerClassName": "org.cloudbus.cloudsim.CloudletSchedulerTimeShared",
+                    "mips": 250,
+                    "name": "MEL.58",
+                    "pesNumber": 1,
+                    "ram": 10000,
+                    "vmm": "xxx"
+                }
+            ],
+            "characteristics": {
+                "architecture": "x86",
+                "cost": 1.0,
+                "costPerBw": 0.0,
+                "costPerMem": 0.05,
+                "costPerSec": 0.0,
+                "costPerStorage": 0.001,
+                "os": "Linux",
+                "timeZone": 10.0,
+                "vmm": "Xen"
+            },
+            "controllers": [
+                {
+                    "name": "edge_sdn_controller_58",
+                    "routingPolicy": "ShortestPathBw",
+                    "trafficPolicy": "FairShare"
+                }
+            ],
+            "hosts": [
+                {
+                    "bwSize": 100,
+                    "mips": 10000,
+                    "name": "Edge_Device_58",
+                    "pes": 4,
+                    "ramSize": 10000,
+                    "storage": 10000
+                }
+            ],
+            "ioTDevices": [],
+            "links": [
+                {
+                    "bw": 100,
+                    "destination": "edge_58_core",
+                    "source": "edge_58_gateway"
+                },
+                {
+                    "bw": 100,
+                    "destination": "edge_58_device",
+                    "source": "edge_58_core"
+                },
+                {
+                    "bw": 100,
+                    "destination": "Edge_Device_58",
+                    "source": "edge_58_device"
+                }
+            ],
+            "name": "Edge_58",
+            "schedulingInterval": 1.0,
+            "switches": [
+                {
+                    "controller": "edge_sdn_controller_58",
+                    "iops": 1000000000,
+                    "name": "edge_58_gateway",
+                    "type": "gateway"
+                },
+                {
+                    "controller": "edge_sdn_controller_58",
+                    "iops": 1000000000,
+                    "name": "edge_58_core",
+                    "type": "core"
+                },
+                {
+                    "controller": "edge_sdn_controller_58",
+                    "iops": 1000000000,
+                    "name": "edge_58_device",
+                    "type": "edge"
+                }
+            ],
+            "type": "edge",
+            "vmAllocationPolicy": {
+                "className": "VmAllocationPolicyCombinedLeastFullFirst"
+            }
+        }
+    ],
+    "logEntity": {
+        "append": false,
+        "logFilePath": "log.txt",
+        "logLevel": "debug",
+        "saveLogToFile": true
+    },
+    "sdwan": [
+        {
+            "controllers": {
+                "name": "wan_sdn",
+                "routingPolicy": "ShortestPathBw",
+                "trafficPolicy": "FairShare"
+            },
+            "links": [
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_1_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_2_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_3_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_4_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_5_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_6_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_7_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_8_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_9_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_10_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_11_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_12_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_13_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_14_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_15_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_16_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_17_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_18_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_19_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_20_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_21_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_22_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_23_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_24_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_25_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_26_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_27_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_28_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_29_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_30_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_31_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_32_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_33_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_34_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_35_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_36_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_37_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_38_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_39_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_40_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_41_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_42_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_43_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_44_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_45_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_46_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_47_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_48_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_49_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_50_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_51_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_52_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_53_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_54_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_55_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_56_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_57_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "edge_58_gateway"
+                },
+                {
+                    "bw": 1000,
+                    "destination": "sdwan_router_1",
+                    "source": "dc1_gateway"
+                }
+            ],
+            "switches": [
+                {
+                    "controller": "wan_sdn",
+                    "iops": 1000000000,
+                    "name": "sdwan_router_1",
+                    "type": "gateway"
+                }
+            ]
+        }
+    ],
+    "trace_flag": false
+}

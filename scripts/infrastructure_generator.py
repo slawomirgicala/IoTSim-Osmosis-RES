@@ -75,10 +75,10 @@ edge_datacenter_template = {
             {"source": None, "destination": None, "bw": 100},
             {"source": None, "destination": None, "bw": 100},
             {"source": None, "destination": None, "bw": 100}
-        ]
+        ],
+    "ioTDevices": []
 }
 
-# IOT DEVICES - TODO
 iot_device_template = {
     "name": None,
     "bw": 100,
@@ -211,34 +211,27 @@ cloud_datacenter_template = {
                 "type": "gateway",
                 "name": "dc1_gateway",
                 "controller": "dc1_sdn1",
-                "iops" :1000000000
+                "iops": 1000000000
             },
             {
                 "type": "core",
                 "name": "core1",
                 "controller": "dc1_sdn1",
-                "iops" :1000000000
+                "iops": 1000000000
             },
             {
                 "type": "aggregate",
                 "name": "aggregate1",
                 "controller": "dc1_sdn1",
-                "iops" :1000000000
-            },
-            {
-                "type": "edge",
-                "name": "edge1",
-                "controller": "dc1_sdn1",
-                "iops" :1000000000
+                "iops": 1000000000
             }
         ],
     "links":
         [
             {"source": "core1", "destination": "dc1_gateway", "bw": 1000},
             {"source": "core1", "destination": "aggregate1", "bw": 1000},
-            {"source": "aggregate1", "destination": "edge1", "bw": 1000},
-            {"source": "edge1", "destination": "host1" , "bw": 1000},
-            {"source": "edge1", "destination": "host2" , "bw": 1000}
+            {"source": "aggregate1", "destination": "host1", "bw": 1000},
+            {"source": "aggregate1", "destination": "host2", "bw": 1000}
         ]
 }
 
@@ -259,19 +252,117 @@ infrastructure_configuration['sdwan'] = [
                 "iops": 1000000000
             }
         ],
-        "links": [{"source": "edge_" + str(x[0]) + "_gateway", "destination": "sdwan_router_1", "bw": 1000} for x in wind_energy_coordinates.wind_stations]
-        + [{"source": "dc1_gateway", "destination": "sdwan_router_1", "bw": 1000}]
+        "links": [{"source": "edge_" + str(x[0]) + "_gateway", "destination": "sdwan_router_1", "bw": 1000} for x in
+                  wind_energy_coordinates.wind_stations]
+                 + [{"source": "dc1_gateway", "destination": "sdwan_router_1", "bw": 1000}]
     }
 ]
 
+energy_configuration = {
+    "simulationDate": "20160101:0000"
+}
+
+edge_datacenter_energy_template = {
+    "name": None,
+    "type": "edge",
+    "energyManagementPolicy": {
+        "className": "OnGridPolicy"
+    },
+    "utilization": "50",
+    "energyStorage": [
+        {
+            "type": "BATTERY",
+            "capacity": "100",
+            "currentEnergy": "20"
+        }
+    ],
+    "powerGrid": [
+        {
+            "country": "Poland",
+            "priceForEnergy": "0.148",
+            "emissionCO2": "303",
+            "lowEmission": "65",
+            "renewable": "48"
+        }
+    ],
+    "energySources": [
+        {
+            "name": None,
+            "type": "PV_PANELS",
+            "technology": "crystSi",
+            "angle": 50,
+            "peakPower": 50,
+            "loss": 14,
+            "location": {
+                "latitude": None,
+                "longitude": None,
+                "elevation": 0.0
+            }
+        }
+    ]
+}
+
+edge_datacenter_energies = []
+for station in wind_energy_coordinates.wind_stations:
+    edge_datacenter_energy = copy.deepcopy(edge_datacenter_energy_template)
+    station_id = str(station[0])
+    edge_datacenter_energy['name'] = 'Edge_' + station_id
+    edge_datacenter_energy['energySources'][0]['name'] = 'Photovoltaic_panels_' + station_id
+    edge_datacenter_energy['energySources'][0]['location']['latitude'] = station[2]
+    edge_datacenter_energy['energySources'][0]['location']['longitude'] = station[3]
+    edge_datacenter_energies.append(edge_datacenter_energy)
+energy_configuration['edgeDatacenters'] = edge_datacenter_energies
+
+cloud_datacenter_energy_template = {
+    "name": "Cloud_1",
+    "type": "cloud",
+    "energyManagementPolicy": {
+        "className": "OnGridPolicy"
+    },
+    "utilization": "30",
+    "energyStorage": [
+        {
+            "type": "BATTERY",
+            "capacity": "500",
+            "currentEnergy": "10"
+        }
+    ],
+    "powerGrid": [
+        {
+            "country": "Ireland",
+            "priceForEnergy": "0.196",
+            "emissionCO2": "252",
+            "lowEmission": "62",
+            "renewable": "60"
+        }
+    ],
+    "energySources": [
+        {
+            "name": "Photovoltaic_panels_1",
+            "type": "PV_PANELS",
+            "technology": "crystSi",
+            "peakPower": 1000,
+            "loss": "14",
+            "angle": "40",
+            "location": {
+                "latitude": 53.35,
+                "longitude": -6.30,
+                "elevation": 0.0
+            }
+        }
+    ]
+}
+
+energy_configuration['cloudDatacenters'] = [cloud_datacenter_energy_template]
 
 if __name__ == "__main__":
+    print("================ INFRA CONFIGS ====================")
     print(infrastructure_configuration)
     print(json.dumps(infrastructure_configuration, indent=4, sort_keys=True))
-
-
-
-
-
-
-
+    with open("../inputFiles/doubleRES/RES_example_solar_power_only_infrastructure.json", "w") as infra_config_file:
+        infra_config_file.write(json.dumps(infrastructure_configuration, indent=4, sort_keys=True))
+    print("================ ENERGY CONFIGS ====================")
+    print(energy_configuration)
+    print(json.dumps(energy_configuration, indent=4, sort_keys=True))
+    with open("../inputFiles/doubleRES/RES_example_solar_power_only_energy_config.json", "w") as energy_config_file:
+        energy_config_file.write(json.dumps(energy_configuration, indent=4, sort_keys=True))
