@@ -53,7 +53,7 @@ def fetch_data_from_pvgis(source, year):
 
 def write_pvgis_data_to_file(datacenter_name, energy_source_name, content, date):
     filename = f'{datacenter_name}-{energy_source_name}-{date}.json'
-    dic_path = "inputFiles/pvgis"
+    dic_path = "..\inputFiles\pvgis"
     # dic_path = "."
     with open(os.path.join(dic_path, filename), 'wb+') as f:
         f.write(content)

@@ -74,12 +74,11 @@ public class RES_example_solar_power_only {
 
         //Simulation is not started yet thus there is not any MELs.
         //Links for Agents between infrastructure elements.
-        agentBroker.addAgentLink("temperature_1", "Edge_1");
-        agentBroker.addAgentLink("temperature_1", "Edge_2");
-        agentBroker.addAgentLink("temperature_2", "Edge_1");
-        agentBroker.addAgentLink("temperature_2", "Edge_2");
-        agentBroker.addAgentLink("temperature_3", "Edge_1");
-        agentBroker.addAgentLink("temperature_3", "Edge_2");
+        for (int i = 1; i <= 58; i++){
+            agentBroker.addAgentLink("iot_device_1", "Edge_" + i);
+            agentBroker.addAgentLink("iot_device_2", "Edge_" + i);
+            agentBroker.addAgentLink("iot_device_3", "Edge_" + i);
+        }
 
         //Osmotic Agents time interval
         agentBroker.setMAPEInterval(1);
